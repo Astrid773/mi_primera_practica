@@ -6,8 +6,7 @@
 //
 import SwiftUI
 
-struct CampoSencillo: View {
-    @State private var texto = ""
+struct MiprimeraPantalla: View {
     
     var body: some View {
         Spacer()
@@ -20,8 +19,7 @@ struct CampoSencillo: View {
     }
 }
 
-struct MiprimeraPantalla: View{
-      
+struct CampoSencillo: View{
     @State private var texto = ""
 
     var body: some View {
@@ -32,7 +30,8 @@ struct MiprimeraPantalla: View{
         
         TextField("Place holder", text: $texto)
         
-        Button(action: {"Aqui hacemos algo"}) {
+        Button(action: {
+            texto = "Aqui hacemos algo"}) {
             Spacer()
             Image(systemName: "trash, sqieare, fill")
                 .imageScale(.large)
